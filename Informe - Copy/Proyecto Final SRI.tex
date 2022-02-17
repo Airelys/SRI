@@ -1,0 +1,226 @@
+% This is LLNCS.DOC the documentation file of
+% the LaTeX2e class from Springer-Verlag
+% for Lecture Notes in Computer Science, version 2.4
+
+
+\documentclass{llncs}
+\usepackage{llncsdoc}
+%\usepackage{listings}
+%\usepackage{graphicx}
+%\usepackage{amsmath,amsfonts,amsthm}
+%\usepackage[none]{hyphenat}
+%\usepackage{sectsty} % Allows customizing section commands
+%\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+%\setcounter{secnumdepth}{3}
+%
+\begin{document}
+\markboth{Proyecto Final de SRI
+}{ Proyecto Final de SRI}
+\thispagestyle{empty}
+\begin{flushleft}
+\LARGE\bfseries Carrera de Ciencia de la Computaci\'on\\
+Universidad de la Habana\\[2cm]
+\end{flushleft}
+\rule{\textwidth}{1pt}
+\vspace{2pt}
+\begin{flushright}
+\Huge
+\begin{tabular}{@{}l}
+Proyecto Final de\\
+Sistemas de Recuperaci\'on de\\
+Informaci\'on\\
+{\Large Versi\'on 1.0}
+\end{tabular}
+\end{flushright}
+\rule{\textwidth}{1pt}
+\vfill
+%\begin{flushleft}
+%\large\itshape
+%\begin{tabular}{@{}l}
+%{\Large\upshape\bfseries Springer}\\[8pt]
+%Berlin\enspace Heidelberg\enspace New\kern0.1em York\\[5pt]
+%Barcelona\enspace Budapest\enspace Hong\kern0.2em Kong\\[5pt]
+%London\enspace Milan\enspace Paris\enspace\\[5pt]
+%Santa\kern0.2em Clara\enspace Singapore\enspace Tokyo
+%\end{tabular}
+%\end{flushleft}
+
+\begin{flushleft}
+\begin{tabular}{l@{\quad}l@{\hspace{3mm}}l@{\qquad}l}
+$\bullet$&\multicolumn{3}{@{}l}{\bfseries Alejandro Escobar Giraudy C312}\\[1mm]
+$\bullet$&\multicolumn{3}{@{}l}{\bfseries Airelys Collazo Perez C312}\\[1mm]
+\end{tabular}
+\end{flushleft}
+
+
+%
+\newpage
+\tableofcontents
+\newpage
+
+%
+\section{Abstracto}
+%
+
+Hoy vivimos en una era tecnol\'ogica, donde la mayor\'ia de la informaci\'on y de los documentos son digitales y se encuentran a nuestro alcance; pero, c\'omo encontrar un documento espec\'ifico entre tanta informaci\'on.
+\\\\
+Cada d\'ia en alg\'un lugar surge nueva informaci\'on, con el decursar del tiempo esa informaci\'on crece y crece, cuando alguien va a consultar un documento se le hace muy d\'ificil encontrarlo; imaginemos qu\'e tan dif\'icil es encontrar un art\'iculo entre millones y millones que est\'an al alcance. Los sistemas de recuperaci\'on de informaci\'on surgieron para facilitarnos la vida, ellos nos ayudar\'an a encontrar lo que buscamos de una manera mucho m\'as r\'apida y efectiva.
+
+%
+\section{Introducci\'on}
+%
+
+``La recuperaci\'on de informaci\'on intenta resolver el problema de encontrar y rankear documentos relevantes que satisfagan la necesidad de informaci\'on de un usuario, expresada en un determinado lenguaje de consulta''. [1]
+\\\\
+Un proceso de recuperaci\'on de informaci\'on comienza cuando un usuario hace una consulta al sistema. Una consulta constituye la necesidad de una informaci\'on por parte del usuario. En la recuperaci\'on de informaci\'on varios documentos pueden ser respuesta a una consulta con diferentes grados de relevancia. La mayor\'ia de los sistemas computan un ranking para saber que tan bien el documento responde a la consulta, ordenando los documentos de acuerdo a su valor de ranking.
+\\\\
+Este proyecto tiene como objetivo desarrollar un Sistema de Recuperaci\'on de Informaci\'on que sea capaz de procesar determinadas colecciones. En las secciones siguientes se estar\'a explicando el dise\~no y desarrollo de dicho sistema, se har\'a una evaluaci\'on del mismo teniendo en cuenta las m\'etricas objetivas y subjetivas, haciendo uso de dos colecciones de prueba Cranfield y Medline. Por \'ultimo, se realizar\'a un an\'alisis de las ventajas y desventajas del sitema, se plantear\'an algunas recomendaciones y las conclusiones.
+\\\\
+
+%
+\section{Dise\~no del sistema}
+%
+
+\subsection{?`Qu\'e modelo es conveniente usar?}
+Para la realizaci\'on del proyecto se escogi\'o el modelo vectorial, pues, este se basa en la similitud que hay entre la consulta y los documentos. Comparando las ventajas y desventajas estudiadas se decidi\'o que este era un buen modelo, aunque asume una independencia entre los t\'erminos, el modelo \texttt{tf-idf} mejora el rendimiento y adem\'as se ordenan los documentos de acuerdo al grado de similitud con la consulta. Adem\'as, investigando un poco se vio que este era un modelo muy usado en diferentes sistemas de recuperaci\'on de informaci\'on.\\
+
+\subsection{?`Qu\'e otras herramientas se pueden usar?}
+
+\begin{list}{-}{•}
+\item Los diccionarios son una herramienta muy \'util para guardar informaci\'on, es por ello que este proyecto hace uso de los mismos para guardar e intercambiar informaci\'on, es una de las herramientas principales usadas en el sistema, son convenientes para guardar y acceder de una manera sencilla al tf, idf y peso(se explicar\'an m\'as adelante).\\
+
+\item Una forma sencilla de expandir una consulta es procesarla tambi\'en con los sin\'onimos de los t\'erminos de la misma.\\
+
+\item Puede ser usado alg\'un algoritmo de clustering para agrupar los documentos.\\
+
+\item Una interfaz visual har\'ia m\'as f\'acil y sencillo el trabajo del usuario con el sistema.\\
+\end{list}
+
+%
+\section{Implementaci\'on del sistema}
+%
+
+\subsection{Procesamiento y representaci\'on de documentos}
+El procesamiento y representaci\'on de documentos se realiz\'o en \textbf{model.py} en la funci\'on $documents$. Primeramente, se obtendr\'an los documentos de la colecci\'on(tienen que estar en formato .txt, pues es el que lee el proyecto), una vez obtenidos, se pasar\'a a hacer el procesamiento textual de cada documento, guardando en una lista los t\'erminos obtenidos por cada uno.\\
+
+El procesamiento textual se puede encontrar en \textbf{text\_processing.py} , donde se hace uso de la biblioteca $nltk$, donde, el proceso de tokenizaci\'on se llevar\'a a cabo, a partir, de $word\_tokenize$, en el cual, cada palabra se convierte en un token; se continua eliminando las stopwords, las palabras que no aportan ning\'un significado, a trav\'es de $corpus.stopwords$ y con $SnowballStemmer$ y $.stem$ se realiza el proceso de lemmatizing, o sea, se reducen las palabras a su ra\'iz gramatical.\\
+
+Luego del procesamiento textual se vuelve a la funci\'on $documents$, donde se construir\'a un diccionario, en el cual las llaves ser\'an los t\'erminos y los valores ser\'an la frecuencia de ocurrencia del t\'ermino \texttt{$t_i$} dentro de todos los documentos de la colecci\'on(\texttt{idf}) y todos los documentos en los que se encuentra el t\'ermino(cada documento a su vez guardar\'a tambi\'en el valor del \texttt{tf} y peso(\texttt{w}) correspondiente a ese documento con ese t\'ermino), inicialmente los valores de \texttt{idf} y peso ser\'an 0 y posteriormente se calcular\'an y actualizar\'an, para la construcci\'on de este diccionario se llama a la funci\'on $add\_terms$ que se encuentra en \textbf{utils\_model.py}.\\
+
+Cabe aclarar c\'omo se calcul\'o el valor de \texttt{tf} en $add\_terms$. Es importante recordar que:\\
+
+\begin{equation}
+	tf_{i,j} = \frac{freq_{i,j}}{\max_l freq_{l,j}}
+\end{equation}
+
+donde \texttt{$freq_{i,j}$} es la frecuencia del t\'ermino \texttt{$t_i$} en el documento \texttt{$d_j$} y el m\'aximo se calcula sobre todos los t\'erminos del documento \texttt{$d_j$}.\\
+
+
+Para calcular la frecuencia de un t\'ermino en el documento se us\'o $FreqDist$ de $nltk$, luego se busca cu\'al de los t\'erminos tiene la m\'axima frecuencia, y posteriormente, se calcula el \texttt{tf} de cada t\'ermino( ubic\'andolo en el diccionario antes mencionado) dividiendo la frecuencia de cada t\'ermino entre la m\'axima frecuencia.\\
+
+Regresando a la funci\'on $documents$ se manda a actualizar los valores de \texttt{idf} y peso(pues, se hab\'ian inicializado en el diccionario con 0), a trav\'es de las funciones $add_idfs$ y $add_w$, respectivamente, que se encuentran en \textbf{utils\_model.py} .\\
+                                                                                                                                                                                              
+Se debe recordar que:\\
+
+\begin{equation}
+	idf = \log \frac{N}{n_i}
+\end{equation}  
+
+donde \texttt{N} es la cantidad total de documentos y \texttt{$n_i$} la cantidad de documentos en los que aparece el t\'ermino \texttt{$t_i$}.\\                                                                      
+
+Como en el diccionario se tiene guardado como valor los documentos en los que el t\'ermino aparece, buscando len de estos documentos se tiene la cantidad de documentos en los que aparece, y conociendo ya la cantidad de documentos de la colecci\'on, es f\'acil calcular el idf para cada t\'ermino, ser\'ia el logaritmo de la cantidad de documentos de la colecci\'on entre el len de los documentos en los que se encuentra el t\'ermino.\\
+
+Recordar tambi\'en que:\\
+
+\begin{equation}
+	w_{i,j} = tf_{i,j} \times idf_i
+\end{equation}
+
+
+Conociendo ya el valor del $tf$ y del $idf$ de cada t\'ermino por cada documento calculamos el peso en $add\_w$, actualiz\'andolo en el diccionario.\\
+
+Por \'ultimo, la funci\'on $documents$ guarda en una variable global \texttt{dictionary} el diccionario construido, esto se hace haciendo uso de la funci\'on $\_create\_$ que se encuentra en \textbf{utils.py} .\\
+
+\subsection{Procesamiento y representaci\'on de consultas}
+Para el procesamiento y representaci\'on de consultas, primeramente, como forma de expansi\'on de consultas, en \textbf{expansion\_query.py} se buscan los posibles sin\'onimos de los diferentes t\'erminos de la consulta, a trav\'es, de $nltk.corpus.wordnet.synsets$, posteriormente, se mandan a procesar todos los t\'erminos originales de la consulta junto con sus sin\'onimos.\\
+
+En \textbf{model.py} en la funci\'on $query$ se realizar\'a el procesamiento y representaci\'on de la consultas. Al igual que en los documentos se realiza el procesamiento textual con \textbf{text\_processing.py}, igualmente, con $add\_terms$ construimos un diccionario en el que las llaves son los t\'erminos y los valores ser\'an el idf y todos los documentos en los que se encuentra el t\'ermino(en este caso no son los documentos, sino, solamente la consulta). Igualmente se le actualizan los valores de \texttt{tf}, \texttt{idf} y \texttt{w}.\\
+
+\subsection{Similitud}
+Recordar que:\\
+
+\begin{equation}
+	sim(d_j,q) = \frac{\overrightarrow{d_j}*\overrightarrow{q}}{|\overrightarrow{d_j}|*|\overrightarrow{q}|}
+\end{equation}
+
+Luego de todo el procesamiento y representaci\'on de las consultas, se pasa a calcular la similitud entre los documentos y la consulta, ah\'i seguido en la funci\'on $query$ de \textbf{model.py}, se llama a la funci\'on $sim$ que se encuentra en \textbf{utils\_model.py}.\\
+
+En la funci\'on $sim$, primeramente se pasa a buscar los documentos que contienen t\'erminos de la consulta, con ayuda de la funci\'on $documents\_with\_query$ que su implementaci\'on se encuentra en el mismo \textbf{utils\_model.py}, esto se realiza porque cuando se pase a calcular la $\overrightarrow{d_j}*\overrightarrow{q}$ solo tendr\'an incidencia aquellos t\'erminos presentes tanto en la consulta como en el documento, pues, los pesos se multiplican y se suman sucesivamente, por ejemplo, un t\'ermino de la consulta que no se encuentre en el documento tendr\'a peso 0 en ese documento, pues, su frecuencia ah\'i ser\'ia 0. Teniendo los documentos que contienen t\'erminos de la consulta se procede a calcular $\overrightarrow{d_j}*\overrightarrow{q}$. Luego, con las funciones $dj$ y $q$ se calculan $|\overrightarrow{d_j}|$ y $|\overrightarrow{q}|$, respectivamente. Por \'ultimo, se retorna $\frac{\overrightarrow{d_j}*\overrightarrow{q}}{|\overrightarrow{d_j}|*|\overrightarrow{q}|}$.\\
+
+\subsection{Clustering}
+Tambi\'en se decidi\'o implementar un algoritmo de clustering: $kmeans$, utilizando la biblioteca $sklearn.cluster.KMeans$. Primeramente, se le indican cu\'antos cl\'usteres se quieren formar que en este caso son 4. Luego se le pasa al algoritmo la matriz de pesos de los t\'erminos de los documentos, haciendo uso de $sklearn.feature\_extraction. \newline text.TfidfVectorizer$ y $fit\_transform$. De esta forma se tienen agrupados los documentos en 4 cl\'usteres, la implementci\'on se encuentra en \textbf{cluster.py}.\\
+
+\subsection{Interfaz de usuario}
+En esta secci\'on se estar\'a explicando el funcionamiento de la interfaz de usuario implementada, no se har\'a un an\'alisis de la implemtaci\'on de la misma puesto que no es objetivo del proyecto, solo se dir\'a que su implementaci\'on se encuentra en \textbf{user\_interfaz.py} y que se hizo uso de la biblioteca $PyQt5$ para ello.\\
+
+%
+\section{Evaluaci\'on del sistema}
+% 
+
+Para la evaluaci\'on del sistema se usaron las colecciones Cranfield y Medline, las cuales se dejan junto con este reporte y el c\'odigo fuente del sistema. Las colecciones se tienen en $.txt$ pues es el formato que recibe el proyecto, cada documento de la colecci\'on est\'a en un $.txt$ distinto. Las colecciones no est\'an cargadas para que se vea el procesamiento de documentos, el cual se demora un poco, pues son algo extensas las colecciones.\\
+
+\subsubsection{Medidas usadas}
+
+Para evaluar el sistema se implementaron un conjunto de medidas que los eval\'ua de acuerdo a los documentos que recupera y a los que no.\\
+
+Antes de continuar es importante conocer algunos conjuntos:\\
+
+\begin{list}{-}{•}
+\item \textbf{REL} conjunto de documentos relevantes
+\item \textbf{REC} conjunto de documentos recuperados
+\item \textbf{RR} conjunto de documentos relevantes recuperados
+\item \textbf{NN} conjunto de documentos no relevantes no recuperados
+\item \textbf{RI} conjunto de documentos recuperados irrelevantes
+\item \textbf{NR} conjunto de documentos no recuperados relevantes
+\end{list}
+
+
+
+ 
+%
+\section{Ventajas y desventajas del sistema desarrollado}
+% 
+
+El proyecto desarrollado indica ser bastante bueno, pues como se vio en la secci\'on anterior da buenas respuestas. Las m\'etricas que se usan para evaluar los sistemas de recuperaci\'on de informaci\'on dieron buenos resultados. Se tiene implementada una forma de expansi\'on de consulta y un algoritmo de clustering. Se tiene una interfaz visual que es amigable para el usuario. Adem\'as, si se desea a\~nadir alguna nueva funcionalidad no se pasar\'ia mucho trabajo porque est\'a hecho y pensado para que futuros autores puedan trabajar en \'el f\'acilmente.\\
+\\
+Aunque el sitema da buenos resultados, la parte de procesar los documentos se demora un poco, sobre todo para colecciones muy grandes y con documentos extensos. Otra desventaja es que solo lee documentos en formato $.txt$. Adem\'as, el sistema solo puede ser usado localmente, no en la web.\\
+
+%
+\section{Recomendaciones y Conclusiones}
+% 
+
+Adem\'as de las t\'ecnicas utilizadas en este proyecto se considera que pueden a\~nadirse otras que mejoren mucho m\'as la propuesta. Primeramente, el m\'etodo de leer documentos se puede ampliar m\'as para que se lean otros formatos como $.pdf$, $.docx$, $.html$, etc; pues el de este proyecto solo lee $.txt$. Tambi\'en puede proponerse alg\'un mecanismo de optimizaci\'on para que se realice un poco m\'as r\'apido el procesamiento de documentos, pues como ya se mencion\'o se demora un poco en procesarlos. Se pueden a\~nadir otras formas de expandir las consultas como los tesauros. Adem\'as, se puede a\~nadir crawling como forma de recuperaci\'on en la web.\\
+\\
+Siempre los proyectos se pueden mejorar un poco m\'as, siempre queda algo por hacer que lo mejore.\\
+\\
+Desarrollar un Sistema de Recuperaci\'on de informaci\'on es algo trabajoso y que lleva estudio. Hay que intentar responderle al usuario de la mejor manera posible, o sea, se deben satisfacer sus peticiones. Cada desici\'on que se tome es pensando si dar\'a mejores resultados. Son varias fases por las que hay que pasar para mostrar buenas respuestas y siempre intentando hacer un poquito m\'as.\\
+
+
+%
+\section{Referencias}
+%
+
+
+[1]. Tolosa y Bordignon(2007)\\
+
+[2]. Reducir el n\'umero de palabras de un texto: lematizaci\'on y radicalizaci\'on(stemming) con python. (medium.com)\\
+
+[3]. T\'ecnicas avanzadas de recuperaci\'on de informaci\'on.(tecnicasrecuperacioninformacion.blogspot.com)\\
+
+[4]. C\'omo obtener sin\'onimos/ant\'onimos de nltk wordnet en python. (es.acervolima.com)\\
+
+[5]. Primeros pasos en PyQt5 y QtDesigner: Programas gr\'aficos con python. (medium.com)\\
+
+[6]. Conferencias de Sistemas de Recuperaci\'on de Informaci\'on.\\
+
+\end{document}

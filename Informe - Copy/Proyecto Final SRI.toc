@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Abstracto}{3}
+\contentsline {section}{\numberline {2}Introducci\'on}{3}
+\contentsline {section}{\numberline {3}Dise\~no del sistema}{3}
+\contentsline {subsection}{\numberline {3.1}?`Qu\'e modelo es conveniente usar?}{3}
+\contentsline {subsection}{\numberline {3.2}?`Qu\'e otras herramientas se pueden usar?}{4}
+\contentsline {section}{\numberline {4}Implementaci\'on del sistema}{4}
+\contentsline {subsection}{\numberline {4.1}Procesamiento y representaci\'on de documentos}{4}
+\contentsline {subsection}{\numberline {4.2}Procesamiento y representaci\'on de consultas}{6}
+\contentsline {subsection}{\numberline {4.3}Similitud}{6}
+\contentsline {subsection}{\numberline {4.4}Clustering}{7}
+\contentsline {subsection}{\numberline {4.5}Interfaz de usuario}{7}
+\contentsline {section}{\numberline {5}Evaluaci\'on del sistema}{7}
+\contentsline {subsubsection}{Medidas usadas}{7}
+\contentsline {section}{\numberline {6}Ventajas y desventajas del sistema desarrollado}{8}
+\contentsline {section}{\numberline {7}Recomendaciones y Conclusiones}{8}
+\contentsline {section}{\numberline {8}Referencias}{8}
