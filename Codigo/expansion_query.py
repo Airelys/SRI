@@ -10,12 +10,13 @@ from nltk.corpus import wordnet
 def start(json_request):
 
     data = json.loads(json_request)
+    umbral = data['umbral']
     
     '''Buscamos los sinonimos de los terminos de la consulta'''
     words = data['query'] + " " + synonyms(data['query'])
     
     '''Mandamos a ejecutar el modelo con los sinonimos tambien'''
-    return model.query(words)
+    return model.query(words,umbral)
 
 
 '''Metodo para buscar los sinonimos de la consulta'''

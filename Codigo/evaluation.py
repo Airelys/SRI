@@ -1,16 +1,21 @@
-from numpy import e
+import glob
 import model
 import evaluation_measures
 import json
 import expansion_query
+import os
 
-path = 'C:/Users/Airelys/Desktop/med/'
+path = 'C:/Users/Airelys/Desktop/prueba_cran/cran/'
+
+all_docs = glob.glob(os.path.join(path, "*.txt"), recursive=True)
+
+umbral = 0.11
 
 json_value = json.dumps({'action': 'build', 'path': path})
 
 model.model(json_value)
 
-file = open('C:/Users/Airelys/Desktop/medquery.txt','r')
+file = open('C:/Users/Airelys/Desktop/prueba_cran/cranquery.txt','r')
 
 
 p = 0
@@ -29,7 +34,7 @@ for item in file:
     rr10 = []
 
     if item != '\n':
-        json_value = json.dumps({'action': 'query', 'query': item})
+        json_value = json.dumps({'action': 'query', 'query': item, 'umbral': umbral})
 
         json_result = json.loads(expansion_query.start(json_value))
 
@@ -37,10 +42,10 @@ for item in file:
             if(len(r10) < 10):
                 r10.append(pair["document"])
                 
-            file2 = open('C:/Users/Airelys/Desktop/medqrel.txt','r')
+            file2 = open('C:/Users/Airelys/Desktop/prueba_cran/cranqrel.txt','r')
             for j in file2:
                 b =''
-                t = 3
+                t = 1
                 for i in j:
                     if i ==' ':
                         break
@@ -66,14 +71,14 @@ for item in file:
             f2 += evaluation_measures.measure_f(len(rr),len(json_result['results']),len(rel)/len(json_result['results']),2)
             f1 += evaluation_measures.measure_f1(len(rr),len(json_result['results']),len(rel)/len(json_result['results']))
             rp += evaluation_measures.r_precision(len(rr10),10)
-            fa += evaluation_measures.fallout(len(json_result['results']),len(rel)/len(json_result['results']),len(rr),1400)
+            fa += evaluation_measures.fallout(len(json_result['results']),len(rel)/len(json_result['results']),len(rr),len(all_docs))
         
     
 
-print(p/30)
-print(r/30)
-print(f/30)
-print(f1/30)
-print(f2/30)
-print(rp/30)
-print(fa/30)
+print('Precision: ' + str(p/(count-1)))
+print('Recobrado: ' + str(r/(count-1)))
+print('F b=0: ' + str(f/(count-1)))
+print('F1: ' + str(f1/(count-1)))
+print('F b=2: ' + str(f2/(count-1)))
+print('R-precision: ' + str(rp/(count-1)))
+print('Fallo: ' + str(fa/(count-1)))

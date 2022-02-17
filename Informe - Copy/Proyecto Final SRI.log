@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2020.11.3)  16 FEB 2022 17:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2020.11.3)  17 FEB 2022 16:27
 entering extended mode
 **Proyecto*Final*SRI.tex
 
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\Proyecto Final SRI.
-tex"
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\Proyecto Final SRI
+.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,7 +15,7 @@ an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese,
 romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\llncs.cls"
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\llncs.cls"
 Document Class: llncs 2013/09/27 v2.18 
  LaTeX document class for Lecture Notes in Computer Science
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -138,9 +138,41 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \c@remark=\count115
 \headlineindent=\dimen123
 )
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\llncsdoc.sty")
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\Proyecto Final SRI.
-aux")
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\llncsdoc.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count116
+))
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
+)
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\Proyecto Final SRI
+.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
@@ -153,6 +185,20 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count117
+\scratchdimen=\dimen126
+\scratchbox=\box54
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen127
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks20
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <24.88> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -166,8 +212,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\Proyecto Final SRI.
-toc")
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\Proyecto Final SRI
+.toc")
 \tf@toc=\write3
  [2
 
@@ -356,17 +402,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
+<app/inicializando.jpg, id=30, 1027.58907pt x 549.55313pt>
+File: app/inicializando.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
+<use app/inicializando.jpg>
+Package pdftex.def Info: app/inicializando.jpg used on input line 172.
+(pdftex.def)             Requested size: 284.5243pt x 199.16388pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+<app/processing.jpg, id=31, 1027.58907pt x 549.55313pt>
+File: app/processing.jpg Graphic file (type jpg)
+
+<use app/processing.jpg>
+Package pdftex.def Info: app/processing.jpg used on input line 180.
+(pdftex.def)             Requested size: 284.5243pt x 199.16388pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+<app/process.jpg, id=32, 1027.58907pt x 549.55313pt>
+File: app/process.jpg Graphic file (type jpg)
+ <use app/process.jpg>
+Package pdftex.def Info: app/process.jpg used on input line 188.
+(pdftex.def)             Requested size: 284.5243pt x 199.16388pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+<app/query.jpg, id=33, 1027.58907pt x 549.55313pt>
+File: app/query.jpg Graphic file (type jpg)
+ <use app/query.jpg>
+Package pdftex.def Info: app/query.jpg used on input line 196.
+(pdftex.def)             Requested size: 284.5243pt x 199.16388pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+[7] [8 <D:/CIBERNÃ‰TICA/3ro/SRI/Proyecto/New folder/Informe - Copy/app/iniciali
+zando.jpg> <D:/CIBERNÃ‰TICA/3ro/SRI/Proyecto/New folder/Informe - Copy/app/proc
+essing.jpg>] [9 <D:/CIBERNÃ‰TICA/3ro/SRI/Proyecto/New folder/Informe - Copy/app
+/process.jpg> <D:/CIBERNÃ‰TICA/3ro/SRI/Proyecto/New folder/Informe - Copy/app/q
+uery.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
@@ -374,97 +466,225 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--197
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--197
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Overfull \hbox (115.2107pt too wide) in paragraph at lines 218--219
-[]\OT1/cmr/m/n/10 [3]. Tecnicas avan-zadas de re-cu-peracion de in-for-macio
-n.(tecnicasrecuperacioninformacion.blogspot.com) 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
-[8]
-Overfull \hbox (44.57167pt too wide) in paragraph at lines 220--221
-[]\OT1/cmr/m/n/10 [4]. Como obtener sinonimos/antonimos de nltk word-net en 
-python. (es.acervolima.com) 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
-[9]
-("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\Final SRI\Informe - Copy\Proyecto Final SRI.
-aux") ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
+
+ []
+
+[15]
+("D:\CIBERNÃ‰TICA\3ro\SRI\Proyecto\New folder\Informe - Copy\Proyecto Final SRI
+.aux") ) 
 Here is how much of TeX's memory you used:
- 658 strings out of 494045
- 8465 string characters out of 3145963
- 67981 words of memory out of 3000000
- 4007 multiletter control sequences out of 15000+200000
- 8674 words of font info for 31 fonts, out of 3000000 for 9000
+ 1565 strings out of 494045
+ 20980 string characters out of 3145963
+ 83446 words of memory out of 3000000
+ 4876 multiletter control sequences out of 15000+200000
+ 8982 words of font info for 32 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 29i,13n,21p,1043b,213s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Proyecto Final SRI.pdf" (9 pages, 163697 bytes).
+ 29i,13n,21p,1043b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "Proyecto Final SRI.pdf" (15 pages, 554953 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

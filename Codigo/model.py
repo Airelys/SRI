@@ -71,7 +71,7 @@ def documents(path):
 	else: raise Exception("The path is not correct")
 
 
-def query(query):
+def query(query, umbral):
 
 	'''Mandamos a procesar la consulta'''
 	json_process = json.dumps({'action': 'process', 'data': query})
@@ -95,7 +95,7 @@ def query(query):
 	'''Nos quedamos con los n documentos que nos pidieron que mas similitud tienen'''
 	#result = result[:count_doc]
 
-	return json.dumps({'action':'report', 'sucess':True,'results':[{'document':dc, 'value':val} for dc, val in result if val >= 0.09]})
+	return json.dumps({'action':'report', 'sucess':True,'results':[{'document':dc, 'value':val} for dc, val in result if val >= umbral]})
 
 
 
